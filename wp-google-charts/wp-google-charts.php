@@ -1,21 +1,21 @@
 <?php
 
 /**
- * Plugin Name: WP Google Charts
+ * Plugin Name: WP Google Charts Plus
  * Plugin URI: http://wordpress.org/extend/plugins/wp-google-charts/
- * Description: WP Google Charts
+ * Description: WP Google Charts Plus
  * Version: 1.0
- * Author: Hmayak Tigranyan
- * Author URI: http://www.hmayaktigranyan.com/
+ * Author: Caleb J. Evans
+ * Author URI: http://www.scoottiecodes.com
  * Tags: google charts, charts, visualisation, bar chart, column chart, pie chart, chart chortcode, plugin
- * License: GPL
+ * License: GPLv3
 
   =====================================================================================
-  Copyright (C) 2013 Hmayak Tigranyan
+  WP Google Charts Plus is based heavily on WP Google Charts. (http://gtk.org/foo) by Hmayak Tigranyan, copyright 2014.   WP Google Chart Plus is copyright Caleb J. Evans 2014.
 
   This program is free software; you can redistribute it and/or
   modify it under the terms of the GNU General Public License
-  as published by the Free Software Foundation; either version 2
+  as published by the Free Software Foundation; either version 3
   of the License, or (at your option) any later version.
 
   This program is distributed in the hope that it will be useful,

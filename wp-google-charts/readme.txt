@@ -1,15 +1,15 @@
 === Plugin Name ===
-Contributors: hmayaktigranyan
-Donate link: http://hmayaktigranyan.com/
+Contributors: BlueScot
+Donate link: http://scoottiecodes.com
 Tags: google charts, charts, visualisation, bar chart, column chart, pie chart,table chart, chart chortcode, plugin
 Requires at least: 2.8
-Tested up to: 3.7.1
+Tested up to: 3.9.1
 Stable tag: 1.1
 
 Easily integrate google charts, diagrams and tables based on your Google Spreadsheets. 
 
 == Description ==
-WP Google Charts
+WP Google Charts Plus
 
 Easily integrate google charts, diagrams and tables based on your Google Spreadsheets. Spice up your posts with cool visualisations!
 
@@ -59,12 +59,12 @@ Stacked yes or no let's you determine, if the data will be shown in a more fine-
 The chart type is easy. Just pick the one that you want to have from this list:
 
 -	"table"
--	"columnchart"
--	"areachart"
--	"barchart"
--	"linechart"
--	"piechart"
--	"steppedareachart"
+-	"column"
+-	"area"
+-	"bar"
+-	"line"
+-	"pie"
+-	"steppedarea"
 
 Columns is comma separated column ids of spreadsheet,remember it start from 0,like  columns="0,2,6".
 
