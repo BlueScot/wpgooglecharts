@@ -57,6 +57,7 @@ class Wordpress_AdvancedGoogleCharts {
                         }
                         $params = shortcode_parse_atts($params);
                         $defaults = array(
+                            'title' => null,
                             'transpose' => '0',
                             'gid' => '0',
                             'pub' => '0',
@@ -134,93 +135,26 @@ class Wordpress_AdvancedGoogleCharts {
 								dataView.setColumns(columns);
 
                         <?php
-                        $chartdiv =  "agc" .$chartID ;
-                        switch ($params['charttype']) {
-                            case 'columnchart':
-                                ?>
-                                var chart = new google.visualization.ColumnChart(document.getElementById('<?php echo $chartdiv ?>'));
-                                chart.draw(dataView,
-                                    {isStacked:<?php echo $params['stacked']?>,
+                        $chartdiv =  "agc" .$chartID ;                         ?>
+						
+
+								
+								
+								
+				var options = {
+					<?php if (is_string($params['title'])) { echo "title: '{$params['title']}',";} ?>
+					isStacked:<?php echo $params['stacked']?>,
                                         width:<?php echo $params['width']?>,
                                         height:<?php echo $params['height']?>,
                                         chartArea:{left:40,top:30}
-                                    }
+						};
+
+                                var chart = new google.visualization.<?php echo ucfirst($params['charttype']).'Chart' ?>(document.getElementById('<?php echo $chartdiv ?>'));
+                            chart.draw(dataView, options
                                 );
-                                <?php
-                                break;
-                            case 'areachart':
-                                ?>
-                                var chart = new google.visualization.AreaChart(document.getElementById('<?php echo $chartdiv ?>'));
-                            chart.draw(dataView,
-                                    {isStacked:<?php echo $params['stacked']?>,
-                                        width:<?php echo $params['width']?>,
-                                        height:<?php echo $params['height']?>,
-                                        chartArea:{left:40,top:30}
-                                    }
-                                );
-                                    <?php
-                                break;
-                            case 'barchart':
-                                ?>
-                                var chart = new google.visualization.BarChart(document.getElementById('<?php echo $chartdiv ?>'));
-                            chart.draw(dataView,
-                                    {isStacked:<?php echo $params['stacked']?>,
-                                        width:<?php echo $params['width']?>,
-                                        height:<?php echo $params['height']?>,
-                                        chartArea:{left:40,top:30}
-                                    }
-                                );
-                                    <?php
-                                break;
-                            case 'linechart':
-                                ?>
-                                var chart = new google.visualization.LineChart(document.getElementById('<?php echo $chartdiv ?>'));
-                            chart.draw(dataView,
-                                    {
-                                        width:<?php echo $params['width']?>,
-                                        height:<?php echo $params['height']?>,
-                                        chartArea:{left:40,top:30}
-                                    }
-                                );
-                                    <?php
-                                break;
-                            case 'piechart':
-                                ?>
-                                var chart = new google.visualization.PieChart(document.getElementById('<?php echo $chartdiv ?>'));
-                            chart.draw(dataView,
-                                    {
-                                        width:<?php echo $params['width']?>,
-                                        height:<?php echo $params['height']?>,
-                                        chartArea:{left:40,top:30}
-                                    }
-                                );
-                                    <?php
-                                break;
-                            case 'steppedareachart':
-                                ?>
-                                var chart = new google.visualization.SteppedAreaChart(document.getElementById('<?php echo $chartdiv ?>'));
-                            chart.draw(dataView,
-                                    {isStacked:<?php echo $params['stacked']?>,
-                                        width:<?php echo $params['width']?>,
-                                        height:<?php echo $params['height']?>,
-                                        chartArea:{left:40,top:30}
-                                    }
-                                );
-                                    <?php
-                                break;
-                             case 'table':
-                                ?>
-                                var chart = new google.visualization.Table(document.getElementById('<?php echo $chartdiv ?>'));
-                            chart.draw(dataView,
-                                    {width:<?php echo $params['width']?>,
-                                        height:<?php echo $params['height']?>,
-                                        chartArea:{left:40,top:30}
-                                    }
-                                );
-                                    <?php
-                                break;
-                        }
-                        ?>
+								
+								
+
                                                         
                                         }
                                         
